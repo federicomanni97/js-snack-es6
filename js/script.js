@@ -109,3 +109,54 @@ let gradesIdStudents = students.filter((element) => {
 })
 console.log(gradesIdStudents);
 
+//! SNACK 3
+//! Creare un array di oggetti:
+//! Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+//! Stampare in console la bici con peso minore utilizzando destructuring e template literal
+
+
+//! creare array di oggetti info dati da noi
+//! creare variabile bici peso minore 
+//! ciclo for chi cicla array e confronta peso 
+//! destrutturare info bici leggera
+//! usare template literal per stambare in html
+
+
+const peso = [];
+const bici = [
+    
+    {
+        name: 'Bergamont',
+        weight: '20'
+    },
+    {
+        name: 'Bianchi',
+        weight: '18'
+    },
+    {
+        name: 'Cinelli',
+        weight: '14'
+    },
+    {
+        name: 'Gazelle',
+        weight: '17'
+    },
+    {
+        name: 'Trek',
+        weight: '12'
+    }
+];
+
+bici.forEach((element, index) => {
+    peso.push(element.weight);
+    //! destructuring weight/name bici
+    const {name} = bici[index];
+    const {weight} = bici[index];
+    console.log({name});
+    console.log({weight});
+});
+
+const biciLeggera = Math.min(...peso);
+console.log(biciLeggera);
+const risposta = `La bici più leggera pesa ${biciLeggera}kg'`;
+console.log(risposta);
