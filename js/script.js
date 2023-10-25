@@ -152,9 +152,8 @@ bici.forEach((element, index) => {
     //! destructuring weight/name bici
     const {name} = bici[index];
     const {weight} = bici[index];
-    console.log({name});
-    console.log({weight});
 });
+console.log(bici);
 
 const biciLeggera = Math.min(...peso);
 console.log(biciLeggera);
