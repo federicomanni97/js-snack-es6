@@ -211,6 +211,22 @@ soccerTeams.forEach((element, index) =>{
 console.log(soccerTeams);
 console.log(finalResult);
 
+
+const row = document.querySelector(".row");
+
+for (let i = 0; i < finalResult.length; i++) {
+    const col = document.createElement("div");
+    col.classList.add("my-5","text-center", "fs-2");        
+    let template = `
+    <div>
+        <p>Squadra: ${finalResult[i].name}, Falli subiti: ${finalResult[i].falliSubiti}</p>
+    </div>
+`;
+col.innerHTML = template;
+row.append(col);    
+    
+}
+
 //UTILITY
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
